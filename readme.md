@@ -4,7 +4,7 @@
     alt="underdevelopment-logo" 
     style="width: 60px; height: 60px; "
   >
-  <h1 style="margin: 0; font-family: Arial, sans-serif; font-size: 24px;d"> AASHI'S | Official store landing page </h1>
+  <h1 style="margin: 0; font-family: Arial, sans-serif; font-size: 24px;d"> [CLIENT] AASHI'S  </h1>
 </div>
 
 ##### FRONTEND FOLDER DIRECTION
