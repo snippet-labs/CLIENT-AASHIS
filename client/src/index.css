@@ -1,1 +1,16 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+.CONTAINER {
+  @apply p-2;
+}
+
+.FLEX-CENTER {
+  @apply flex items-center justify-center;
+}
+
+.BUTTON {
+  @apply border-transparent rounded-md;
+}
+
+/* COMPONENTS */
+@import './Components/Navbar/Navbar.style.css';

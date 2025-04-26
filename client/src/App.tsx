@@ -1,14 +1,14 @@
 import { ReactElement } from "react";
 
 // COMPONENTS
-import Starter from "./Components/Starter/Starter";
+import Navbar from "./Components/Navbar/Navbar";
 
 // STORE
 // ICONS
 
 const App = (): ReactElement => {
   return (
-    <Starter/>
+    <Navbar/>
   );
 };
 export default App;
