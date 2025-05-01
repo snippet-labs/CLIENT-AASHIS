@@ -1,14 +1,22 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router';
 
 // COMPONENTS
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from './Components/Navbar/Navbar';
 
 // STORE
 // ICONS
 
 const App = (): ReactElement => {
   return (
-    <Navbar/>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path={'/'} element={<></>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 export default App;
