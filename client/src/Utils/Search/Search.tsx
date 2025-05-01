@@ -4,10 +4,10 @@ import { MdKeyboardCommandKey } from 'react-icons/md';
 
 const Searchbar = () => {
   return (
-    <div className="FLEX-CENTER HOVER-LINK TEXT hover:bg-black">
+    <div className="FLEX-CENTER HOVER-LINK TEXT hover:bg-black hover:text-white">
       <IoSearchSharp size={20} />
       <div className="FLEX-CENTER">
-        <MdKeyboardCommandKey /> + K
+        <MdKeyboardCommandKey /> K
       </div>
     </div>
   );

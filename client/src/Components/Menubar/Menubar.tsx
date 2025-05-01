@@ -5,7 +5,8 @@ import { Link } from 'react-router';
 import { AnimatePresence, motion } from 'motion/react';
 // UTILS
 import Button from '../../Utils/Button/Button';
-import Searchbar from '../../Utils/Searchbar/Searchbar';
+import Search from '../../Utils/Search/Search';
+import SearchModal from '../../Utils/Search/SearchModal';
 // CONSTANTS
 import { sales } from '../../Constants/Saleoffer';
 // ICONS
@@ -18,6 +19,7 @@ import { IoMoon } from 'react-icons/io5';
 
 // HOOKS
 import useWindowSize from '../../Hooks/useWindowSize';
+import useSearchModal from '../../Hooks/useSearchModal';
 
 // MUI COMPONENTS
 import Badge from '@mui/material/Badge';
@@ -27,6 +29,8 @@ import Tooltip from '@mui/material/Tooltip';
 const Menubar: React.FC = () => {
   // HOOKS
   const windowSize: number = useWindowSize();
+  const { isOpen, handleCloseSearchModal, handleOpenSearchModal } =
+    useSearchModal();
   const [currentSale, setCurrentSale] = useState<string>(sales[0]);
   const timeoutRef = useRef<number | null>(null);
 
@@ -89,7 +93,7 @@ const Menubar: React.FC = () => {
         </div>
 
         <div className="FLEX-CENTER md:GAP lg:GAP">
-          <Link to={'/login'} className="TEXT HOVER-LINK hover:bg-green-400">
+          <Link to={'/login'} className="TEXT HOVER-LINK hover:bg-blue-400">
             Login
           </Link>
           <Link
@@ -113,13 +117,16 @@ const Menubar: React.FC = () => {
                 </Badge>
               </Tooltip>
             </div>
-            <Searchbar />
+            <button onClick={handleOpenSearchModal}>
+              <Search />
+            </button>
             <div className="HOVER-BUTTON">
               <IoMoon size={20} />
             </div>
           </div>
         </div>
       </div>
+      <SearchModal isOpen={isOpen} onClose={handleCloseSearchModal}/>
     </div>
   );
 };
