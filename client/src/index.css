@@ -50,8 +50,9 @@
   @apply border-transparent hover:bg-black hover:text-white hover:cursor-pointer p-1 rounded-md;
 }
 .HOVER-LINK {
-  @apply border-transparent rounded-full px-2 py-0.5 md:px-4 md:py-0.5 lg:px-4 lg:py-0.5;
+  @apply border-transparent rounded-full px-2 py-1 md:px-4 md:py-0.5 lg:px-4 lg:py-0.5;
 }
 
 /* COMPONENTS */
 @import './Components/Menubar/Menubar.style.css';
+@import './Components/Navbar/Navbar.style.css';

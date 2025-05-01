@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 
 // COMPONENTS
 import Menubar from './Components/Menubar/Menubar';
+import Navbar from './Components/Navbar/Navbar';
 
 // STORE
 // ICONS
@@ -12,6 +13,7 @@ const App = (): ReactElement => {
     <>
       <BrowserRouter>
         <Menubar />
+        < Navbar/>
         <Routes>
           <Route path={'/'} element={<></>} />
         </Routes>
