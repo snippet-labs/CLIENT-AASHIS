@@ -1,0 +1,4 @@
+/* MUI COMPONENTS STYLES */
+.MuiBadge-badge {
+  @apply bg-blue-400;
+}

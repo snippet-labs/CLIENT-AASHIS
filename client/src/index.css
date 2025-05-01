@@ -1,1 +1,57 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import './mui.css';
+
+/* UTILITIES STYLE */
+.HEIGHT {
+  @apply h-[45px];
+}
+.PADDING {
+  @apply p-2;
+}
+.MARGIN-TOP {
+  @apply mt-1;
+}
+.MARGIN-BOTTOM {
+  @apply mb-1;
+}
+.GAP {
+  @apply gap-2;
+}
+.ROUNDED {
+  @apply rounded-md;
+}
+
+/* UNIVERSAL STYLE */
+.CONTAINER {
+  @apply p-2;
+}
+.FLEX-CENTER {
+  @apply flex items-center justify-center;
+}
+.FLEX-EVENLY {
+  @apply flex items-center justify-evenly;
+}
+.FLEX-BETWEEN {
+  @apply flex items-center justify-between;
+}
+.ROW {
+  @apply flex-row;
+}
+.COLUMN {
+  @apply flex-col;
+}
+.BUTTON {
+  @apply border-transparent rounded-md;
+}
+.TEXT {
+  @apply font-normal text-sm md:text-lg transition-all;
+}
+.HOVER-BUTTON {
+  @apply border-transparent hover:bg-black hover:text-white hover:cursor-pointer p-1 rounded-md;
+}
+.HOVER-LINK {
+  @apply border-transparent rounded-full px-2 py-0.5 md:px-4 md:py-0.5 lg:px-4 lg:py-0.5;
+}
+
+/* COMPONENTS */
+@import './Components/Menubar/Menubar.style.css';
