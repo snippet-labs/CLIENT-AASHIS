@@ -24,7 +24,7 @@ import Badge from '@mui/material/Badge';
 import Tooltip from '@mui/material/Tooltip';
 
 // FUNCTIONAL COMPONENT
-const Navbar: React.FC = () => {
+const Menubar: React.FC = () => {
   // HOOKS
   const windowSize: number = useWindowSize();
   const [currentSale, setCurrentSale] = useState<string>(sales[0]);
@@ -124,4 +124,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default Menubar;

@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router';
 
 // COMPONENTS
-import Navbar from './Components/Navbar/Navbar';
+import Menubar from './Components/Menubar/Menubar';
 
 // STORE
 // ICONS
@@ -11,7 +11,7 @@ const App = (): ReactElement => {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Menubar />
         <Routes>
           <Route path={'/'} element={<></>} />
         </Routes>
