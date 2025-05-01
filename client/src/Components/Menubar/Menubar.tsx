@@ -99,7 +99,6 @@ const Menubar: React.FC = () => {
             Register
           </Link>
           <div className="FLEX-CENTER GAP MARGIN-TOP PADDING">
-            <Searchbar />
             <div className="HOVER-BUTTON">
               <Tooltip title="cart">
                 <Badge badgeContent={0} showZero>
@@ -107,14 +106,15 @@ const Menubar: React.FC = () => {
                 </Badge>
               </Tooltip>
             </div>
-            <div className="HOVER-BUTTON">
+            <div className="HOVER-BUTTON mr-3">
               <Tooltip title="wishlist">
                 <Badge badgeContent={0} showZero>
                   <IoHeart size={20} />
                 </Badge>
               </Tooltip>
             </div>
-            <div className="HOVER-BUTTON ml-3">
+            <Searchbar />
+            <div className="HOVER-BUTTON">
               <IoMoon size={20} />
             </div>
           </div>
