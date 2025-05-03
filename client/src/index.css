@@ -53,6 +53,6 @@
   @apply border-transparent rounded-full px-2 py-0.5 md:px-4 md:py-0.5 lg:px-4 lg:py-0.5;
 }
 
-/* COMPONENTS */
+/* COMPONENTS & UTILITIES */
 @import './Components/Menubar/Menubar.style.css';
 @import './Utils/Loader/Loader.style.css';
