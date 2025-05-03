@@ -5,15 +5,25 @@ import { Routes, Route } from 'react-router';
 const Loader = lazy(() => import('../Utils/Loader/Loader'));
 // COMPONENTS
 const Menubar = lazy(() => import('../Components/Menubar/Menubar'));
+const Navigationbar = lazy(
+  () => import('../Components/Navigationbar/Navigationbar'),
+);
 
 const Layout: React.FC = () => {
   return (
-    <div className="CONTAINER">
+    <div className="CONTAINER SCREEN COLUMN RELATIVE">
       <Suspense fallback={<Loader />}>
-        <Menubar />
-        <Routes>
-          <Route></Route>
-        </Routes>
+        <div className="FIXED T2 L2 R2 Z10">
+          <Menubar />
+        </div>
+        <div className="FLEX-GROW PADDING-TOP PADDING-BOTTOM FLOW-Y-AUTO CONTENT-TOP-MARGIN CONTENT-BOTTOM-MARGIN">
+          <Routes>
+            <Route></Route>
+          </Routes>
+        </div>
+        <div className="FIXED B0 L2 R2 Z10">
+          <Navigationbar />
+        </div>
       </Suspense>
     </div>
   );

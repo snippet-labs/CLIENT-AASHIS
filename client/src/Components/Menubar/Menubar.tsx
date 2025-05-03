@@ -49,7 +49,7 @@ const Menubar: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div className="h-[11vh]">
       <div className="FLEX-CENTER GAP">
         <AnimatePresence mode="wait">
           <motion.div
@@ -120,7 +120,7 @@ const Menubar: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
