@@ -55,3 +55,4 @@
 
 /* COMPONENTS */
 @import './Components/Menubar/Menubar.style.css';
+@import './Utils/Loader/Loader.style.css';

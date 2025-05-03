@@ -16,7 +16,7 @@ const Content = () => {
   // SIDE-EFFECT
   useEffect(() => {
     setIsLoading(true);
-    const elapsedTime = setTimeout(() => setIsLoading(false), 500);
+    const elapsedTime = setTimeout(() => setIsLoading(false), 1000);
 
     return () => clearTimeout(elapsedTime);
   }, [location.pathname]);
