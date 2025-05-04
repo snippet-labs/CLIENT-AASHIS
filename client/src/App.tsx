@@ -1,19 +1,35 @@
-import { ReactElement } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router';
 
 // COMPONENTS
-import Menubar from './Components/Menubar/Menubar';
+import Layout from './Layout/Layout';
+import Loader from './Utils/Loader/Loader';
 
 // STORE
 // ICONS
 
-const App = (): ReactElement => {
+const Content = () => {
+  // STATES
+  const location = useLocation();
+  const [isLoading, setIsLoading] = useState<boolean>(() => false);
+
+  // SIDE-EFFECT
+  useEffect(() => {
+    setIsLoading(true);
+    const elapsedTime = setTimeout(() => setIsLoading(false), 1000);
+
+    return () => clearTimeout(elapsedTime);
+  }, [location.pathname]);
+
+  return isLoading ? <Loader /> : <Layout />;
+};
+
+const App: React.FC = () => {
   return (
     <>
       <BrowserRouter>
-        <Menubar />
         <Routes>
-          <Route path={'/'} element={<></>} />
+          <Route path="/*" element={<Content />}></Route>
         </Routes>
       </BrowserRouter>
     </>

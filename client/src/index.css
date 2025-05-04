@@ -2,14 +2,29 @@
 @import './mui.css';
 
 /* UTILITIES STYLE */
+.FIXED {
+  @apply fixed;
+}
+.RELATIVE {
+  @apply relative;
+}
 .HEIGHT {
   @apply h-[45px];
 }
 .PADDING {
   @apply p-2;
 }
+.PADDING-TOP {
+  @apply pt-2;
+}
+.PADDING-BOTTOM {
+  @apply pb-2;
+}
 .MARGIN-TOP {
   @apply mt-1;
+}
+.MARGIN-TOP-AUTO {
+  @apply mt-auto;
 }
 .MARGIN-BOTTOM {
   @apply mb-1;
@@ -20,10 +35,46 @@
 .ROUNDED {
   @apply rounded-md;
 }
+.L2 {
+  @apply left-2;
+}
+.R2 {
+  @apply right-2;
+}
+.T2 {
+  @apply top-2;
+}
+.B0 {
+  @apply bottom-0;
+}
+.B2 {
+  @apply bottom-2;
+}
+.Z10 {
+  @apply z-10;
+}
 
 /* UNIVERSAL STYLE */
+.SCREEN {
+  @apply h-screen;
+}
 .CONTAINER {
   @apply p-2;
+}
+.FLEX {
+  @apply flex;
+}
+.ROW {
+  @apply flex-row;
+}
+.COLUMN {
+  @apply flex-col;
+}
+.FLEX-GROW {
+  @apply flex-grow;
+}
+.FLEX-NONE {
+  @apply flex-none;
 }
 .FLEX-CENTER {
   @apply flex items-center justify-center;
@@ -34,18 +85,25 @@
 .FLEX-BETWEEN {
   @apply flex items-center justify-between;
 }
-.ROW {
-  @apply flex-row;
-}
-.COLUMN {
-  @apply flex-col;
-}
 .BUTTON {
   @apply border-transparent rounded-md;
 }
 .TEXT {
   @apply font-normal text-sm md:text-lg transition-all;
 }
+.FLOW-Y-AUTO {
+  @apply overflow-y-auto;
+}
+
+/* CLAC STYLES */
+.CONTENT-TOP-MARGIN {
+  @apply mt-[11vh];
+}
+.CONTENT-BOTTOM-MARGIN {
+  @apply mb-[6vh];
+}
+
+/* HOVER */
 .HOVER-BUTTON {
   @apply border-transparent hover:bg-black hover:text-white hover:cursor-pointer p-1 rounded-md;
 }
@@ -53,5 +111,6 @@
   @apply border-transparent rounded-full px-2 py-0.5 md:px-4 md:py-0.5 lg:px-4 lg:py-0.5;
 }
 
-/* COMPONENTS */
+/* COMPONENTS & UTILITIES */
 @import './Components/Menubar/Menubar.style.css';
+@import './Utils/Loader/Loader.style.css';

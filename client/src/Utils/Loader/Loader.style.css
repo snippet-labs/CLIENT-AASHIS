@@ -1,0 +1,3 @@
+.LOADER {
+  @apply bg-white w-full h-screen flex items-center justify-center overflow-x-hidden;
+}
