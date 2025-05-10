@@ -8,3 +8,7 @@ export interface RecentSearchesProps {
     onSelectSearch: (search: string) => void;
     onClearSearches: () => void;
 }
+
+export type SearchBarProps = {
+    onSearch: (term: string) => void;
+};

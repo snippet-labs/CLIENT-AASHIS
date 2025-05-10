@@ -1,0 +1,9 @@
+.CENTER {
+  @apply flex items-center;
+}
+.END {
+  @apply flex justify-end;
+}
+.POINTER {
+  @apply hover:cursor-pointer;
+}

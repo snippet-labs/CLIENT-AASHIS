@@ -1,37 +1,35 @@
 import { useState, useEffect } from "react";
 
 const useSearchModal = () => {
-    // STATES
-    const [isOpen, setIsOpen] = useState<boolean>(() => false)
+    // STATE
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     // HANDLER FUNCTIONS 
-    const handleOpenSearchModal = () => {
-        setIsOpen(true);
-    }
-    const handleCloseSearchModal = () => {
-        setIsOpen(false);
-    }
+    const handleOpenSearchModal = () => setIsOpen(true);
+    const handleCloseSearchModal = () => setIsOpen(false);
 
-    // SIDE-EFFECT 
+    // SIDE-EFFECT: listen for Cmd+K / Ctrl+K
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
-            // Modal should open on Pressing Cmd+K & Ctrl+K
             if ((event.metaKey || event.ctrlKey) && (event.key === 'k' || event.key === 'K')) {
                 event.preventDefault();
-                setIsOpen((previous) => !previous);
+                setIsOpen(prev => !prev);
             }
-        }
+        };
+
         window.addEventListener('keydown', handleKeyDown);
-        () => window.removeEventListener('keydown', handleKeyDown);
-    }, [])
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
 
     return {
         isOpen,
-        handleCloseSearchModal,
         handleOpenSearchModal,
-        toggleSearchModal: () => setIsOpen((previous) => !previous)
+        handleCloseSearchModal,
+        toggleSearchModal: () => setIsOpen(prev => !prev),
     };
-
-}
+};
 
 export default useSearchModal;

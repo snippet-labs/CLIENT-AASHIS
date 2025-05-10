@@ -126,7 +126,7 @@ const Menubar: React.FC = () => {
           </div>
         </div>
       </div>
-      <SearchModal isOpen={isOpen} onClose={handleCloseSearchModal}/>
+      <SearchModal isOpen={isOpen} onClose={handleCloseSearchModal} />
     </div>
   );
 };
