@@ -29,10 +29,11 @@ import Tooltip from '@mui/material/Tooltip';
 const Menubar: React.FC = () => {
   // HOOKS
   const windowSize: number = useWindowSize();
+  // STATES
   const { isOpen, handleCloseSearchModal, handleOpenSearchModal } =
     useSearchModal();
   const [currentSale, setCurrentSale] = useState<string>(sales[0]);
-  const [isMac,setIsMac] = useState(false)
+  const [isMac, setIsMac] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
   // EFFECTS
@@ -53,11 +54,10 @@ const Menubar: React.FC = () => {
     };
   }, []);
 
-    useEffect(() => {
-      const platform = window.navigator.platform.toLowerCase();
-      setIsMac(platform.includes('mac'));
-    }, []);
-  
+  useEffect(() => {
+    const platform = window.navigator.platform.toLowerCase();
+    setIsMac(platform.includes('mac'));
+  }, []);
 
   return (
     <div className="h-[11vh]">
