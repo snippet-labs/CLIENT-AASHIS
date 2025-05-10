@@ -1,6 +1,11 @@
 export interface SearchModalProps {
     isOpen: boolean;
+    isMac: boolean;
     onClose: () => void;
+}
+
+export interface SearchProps {
+  isMac: boolean;
 }
 
 export interface RecentSearchesProps {
