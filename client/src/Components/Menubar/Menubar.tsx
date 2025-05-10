@@ -32,6 +32,7 @@ const Menubar: React.FC = () => {
   const { isOpen, handleCloseSearchModal, handleOpenSearchModal } =
     useSearchModal();
   const [currentSale, setCurrentSale] = useState<string>(sales[0]);
+  const [isMac,setIsMac] = useState(false)
   const timeoutRef = useRef<number | null>(null);
 
   // EFFECTS
@@ -51,6 +52,12 @@ const Menubar: React.FC = () => {
       }
     };
   }, []);
+
+    useEffect(() => {
+      const platform = window.navigator.platform.toLowerCase();
+      setIsMac(platform.includes('mac'));
+    }, []);
+  
 
   return (
     <div className="h-[11vh]">
@@ -118,7 +125,7 @@ const Menubar: React.FC = () => {
               </Tooltip>
             </div>
             <button onClick={handleOpenSearchModal}>
-              <Search />
+              <Search isMac={isMac} />
             </button>
             <div className="HOVER-BUTTON">
               <IoMoon size={20} />
@@ -126,7 +133,11 @@ const Menubar: React.FC = () => {
           </div>
         </div>
       </div>
-      <SearchModal isOpen={isOpen} onClose={handleCloseSearchModal} />
+      <SearchModal
+        isOpen={isOpen}
+        onClose={handleCloseSearchModal}
+        isMac={isMac}
+      />
     </div>
   );
 };

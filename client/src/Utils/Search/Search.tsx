@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 // ICONS
 import { IoSearchSharp } from 'react-icons/io5';
 import { MdKeyboardCommandKey } from 'react-icons/md';
 
-const Searchbar: React.FC = () => {
-  const [isMac, setIsMac] = useState(false);
+// TYPES
+import { SearchProps } from './Search.types';
 
-  useEffect(() => {
-    const platform = window.navigator.platform.toLowerCase();
-    setIsMac(platform.includes('mac'));
-  }, []);
-
+const Searchbar: React.FC<SearchProps> = ({ isMac }) => {
   return (
     <div className="FLEX-CENTER HOVER-LINK TEXT hover:bg-black hover:text-white">
       <IoSearchSharp size={20} />
@@ -18,9 +14,9 @@ const Searchbar: React.FC = () => {
         {isMac ? (
           <MdKeyboardCommandKey size={20} />
         ) : (
-          <kbd className="px-1 bg-gray-200 rounded text-sm">Ctrl</kbd>
+          <span className="text-sm">CTRL</span>
         )}
-        <span className="font-medium">K</span>
+        <span className="font-normal">K</span>
       </div>
     </div>
   );

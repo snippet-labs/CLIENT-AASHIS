@@ -11,7 +11,7 @@ import { SearchModalProps } from './Search.types';
 // COMPONENTS
 import RecentSearches from './RecentSearch';
 
-const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, isMac }) => {
   // STATES
   const [query, setQuery] = useState('');
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
@@ -140,9 +140,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
 
         <div className="END px-4 py-3 border-t border-gray-100">
           <div className="CENTER gap-1 text-xs text-gray-500">
-            <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
-              <MdKeyboardCommandKey size={14} />
+           {isMac ? (
+             <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
+              <MdKeyboardCommandKey size={20} />
             </span>
+           ): (
+            <span  className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">CTRL</span>
+           )}
             <span className="text-gray-400">+</span>
             <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
               K
