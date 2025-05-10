@@ -23,7 +23,7 @@ const Layout: React.FC = () => {
             <Route path="/" element={<Homepage />} />
           </Routes>
         </div>
-        <div className="FIXED B2 L2 R2 Z10">
+        <div className="FIXED B2 md:B2 lg:B2 L2 R2 Z10">
           <Navigationbar />
         </div>
       </Suspense>

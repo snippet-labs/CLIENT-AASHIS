@@ -114,6 +114,9 @@
 }
 
 /* HOVER */
+.POINTER {
+  @apply hover:cursor-pointer;
+}
 .HOVER-BUTTON {
   @apply border-transparent hover:bg-black hover:text-white hover:cursor-pointer p-1 rounded-md;
 }
@@ -130,4 +133,4 @@
 @import './Utils/Loader/Loader.style.css';
 @import './Utils/Search/Search.style.css';
 
-@import './Pages/Home/Home.style.tsx';
+@import './Pages/Home/Home.style.css';
