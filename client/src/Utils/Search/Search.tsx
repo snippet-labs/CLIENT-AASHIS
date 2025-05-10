@@ -16,7 +16,7 @@ const Searchbar: React.FC = () => {
       <IoSearchSharp size={20} />
       <div className="flex items-center space-x-1">
         {isMac ? (
-          <MdKeyboardCommandKey size={16} />
+          <MdKeyboardCommandKey size={20} />
         ) : (
           <kbd className="px-1 bg-gray-200 rounded text-sm">Ctrl</kbd>
         )}
