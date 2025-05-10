@@ -1,0 +1,4 @@
+/* BACKGROUND & COLORS */
+.PRIMARY-GRAY {
+  @apply bg-gray-300;
+}

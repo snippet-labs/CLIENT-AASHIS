@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './mui.css';
+@import './globals.css';
 
 /* UTILITIES STYLE */
 .FIXED {
@@ -64,6 +65,9 @@
 .CONTAINER {
   @apply p-2;
 }
+.BORDER {
+  @apply border-1;
+}
 .FLEX {
   @apply flex;
 }
@@ -122,5 +126,8 @@
 
 /* COMPONENTS & UTILITIES */
 @import './Components/Menubar/Menubar.style.css';
+
 @import './Utils/Loader/Loader.style.css';
 @import './Utils/Search/Search.style.css';
+
+@import './Pages/Home/Home.style.tsx';
