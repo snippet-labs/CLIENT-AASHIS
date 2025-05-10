@@ -142,7 +142,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, isMac }) => 
           <div className="CENTER gap-1 text-xs text-gray-500">
            {isMac ? (
              <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
-              <MdKeyboardCommandKey size={14} />
+              <MdKeyboardCommandKey size={20} />
             </span>
            ): (
             <span  className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">CTRL</span>
