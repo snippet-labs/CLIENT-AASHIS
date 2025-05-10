@@ -125,7 +125,7 @@ const Menubar: React.FC = () => {
               </Tooltip>
             </div>
             <button onClick={handleOpenSearchModal}>
-              <Search isMac={isMac} />
+              <Search isMac={isMac} windowSize={windowSize} />
             </button>
             <div className="HOVER-BUTTON">
               <IoMoon size={20} />
@@ -137,6 +137,7 @@ const Menubar: React.FC = () => {
         isOpen={isOpen}
         onClose={handleCloseSearchModal}
         isMac={isMac}
+        windowSize={windowSize}
       />
     </div>
   );
