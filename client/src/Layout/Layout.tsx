@@ -21,7 +21,7 @@ const Layout: React.FC = () => {
             <Route></Route>
           </Routes>
         </div>
-        <div className="FIXED B0 L2 R2 Z10">
+        <div className="FIXED B2 L2 R2 Z10">
           <Navigationbar />
         </div>
       </Suspense>
