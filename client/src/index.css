@@ -53,6 +53,9 @@
 .Z10 {
   @apply z-10;
 }
+.Z50 {
+  @apply z-50;
+}
 
 /* UNIVERSAL STYLE */
 .SCREEN {
@@ -75,6 +78,9 @@
 }
 .FLEX-NONE {
   @apply flex-none;
+}
+.FLEX-START {
+  @apply flex items-start justify-center;
 }
 .FLEX-CENTER {
   @apply flex items-center justify-center;
@@ -110,7 +116,11 @@
 .HOVER-LINK {
   @apply border-transparent rounded-full px-2 py-0.5 md:px-4 md:py-0.5 lg:px-4 lg:py-0.5;
 }
+.BLUR {
+  @apply backdrop-blur-sm;
+}
 
 /* COMPONENTS & UTILITIES */
 @import './Components/Menubar/Menubar.style.css';
 @import './Utils/Loader/Loader.style.css';
+@import './Utils/Search/Search.style.css';
