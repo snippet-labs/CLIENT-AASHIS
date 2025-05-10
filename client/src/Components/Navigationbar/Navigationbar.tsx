@@ -22,7 +22,7 @@ const Navigationbar: React.FC = () => {
   const windowSize: number = useWindowSize();
 
   return (
-    <div className="h-[6vh]">
+    <div>
       <div className="PADDING HEIGHT bg-gray-300 ROUNDED">
         <div className="FLEX-EVENLY GAP">
           {Object.entries(NAVIGATION).map(([title, { icon, path }]) => (

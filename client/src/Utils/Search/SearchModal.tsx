@@ -91,7 +91,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
 
   if (!isOpen) return null;
 
-    const isMobile = windowSize <= 1300;
+  const isMobile = windowSize <= 1300;
 
   return (
     <div
@@ -149,8 +149,8 @@ const SearchModal: React.FC<SearchModalProps> = ({
           <div className="END px-4 py-3 border-t border-gray-100">
             <div className="CENTER gap-1 text-xs text-gray-500">
               {isMac ? (
-                <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
-                  <MdKeyboardCommandKey size={20} />
+                <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-1 font-medium">
+                  <MdKeyboardCommandKey size={14} />
                 </span>
               ) : (
                 <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
@@ -158,7 +158,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
                 </span>
               )}
               <span className="text-gray-400">+</span>
-              <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
+              <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-1 min-w-[18px] font-medium">
                 K
               </span>
               <span className="ml-1">to close</span>
