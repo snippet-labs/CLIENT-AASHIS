@@ -11,6 +11,7 @@ import { SearchModalProps } from './Search.types';
 // COMPONENTS
 import RecentSearches from './RecentSearch';
 
+// FUNCTIONAL UTILITY COMPONENT
 const SearchModal: React.FC<SearchModalProps> = ({
   isOpen,
   onClose,
@@ -93,14 +94,15 @@ const SearchModal: React.FC<SearchModalProps> = ({
 
   const isMobile = windowSize <= 1300;
 
+  // RENDER
   return (
     <div
-      className="fixed inset-0 bg-black/40 BLUR FLEX-START pt-[20vh] Z50 animate-in fade-in duration-200"
+      className="fixed inset-0 BLUR-MD SHADOW FLEX-START pt-[20vh] Z50 animate-in fade-in duration-200"
       onClick={onClose}
     >
       <div
         ref={modalRef}
-        className="w-full max-w-2xl mx-4 bg-white rounded-xl shadow-2xl overflow-hidden FLEX COLUMN max-h-[60vh] animate-in zoom-in-95 duration-200"
+        className="w-full max-w-2xl mx-4 bg-white rounded-xl BORDER SHADOW overflow-hidden FLEX COLUMN max-h-[60vh] animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="CENTER px-4 py-3 border-b border-gray-100">

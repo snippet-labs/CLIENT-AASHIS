@@ -1,5 +1,6 @@
 import { ButtonType } from './Button.types';
 
+// FUNCTIONAL UTILITY COMPONENT
 const Button: React.FC<ButtonType> = ({
   windowSize,
   icon,
@@ -8,6 +9,7 @@ const Button: React.FC<ButtonType> = ({
   onClick,
 }) => {
   const isMobile = windowSize <= 1300;
+  // RENDER
   return (
     <button onClick={onClick} className={className}>
       {isMobile ? icon : title}

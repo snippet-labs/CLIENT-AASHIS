@@ -8,7 +8,7 @@ import Button from '../../Utils/Button/Button';
 import Search from '../../Utils/Search/Search';
 import SearchModal from '../../Utils/Search/SearchModal';
 // CONSTANTS
-import { sales } from '../../Constants/Saleoffer';
+import { SALES } from '../../Constants/Saleoffer';
 // ICONS
 import { IoCall } from 'react-icons/io5';
 import { FaTruckFast } from 'react-icons/fa6';
@@ -27,20 +27,20 @@ import Tooltip from '@mui/material/Tooltip';
 
 // FUNCTIONAL COMPONENT
 const Menubar: React.FC = () => {
-  // HOOKS
+  // HOOK
   const windowSize: number = useWindowSize();
   // STATES
   const { isOpen, handleCloseSearchModal, handleOpenSearchModal } =
     useSearchModal();
-  const [currentSale, setCurrentSale] = useState<string>(sales[0]);
+  const [currentSale, setCurrentSale] = useState<string>(SALES[0]);
   const [isMac, setIsMac] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
   // EFFECTS
   useEffect(() => {
     const showRandomSale = (): void => {
-      const randomIndex: number = Math.floor(Math.random() * sales.length);
-      setCurrentSale(sales[randomIndex]);
+      const randomIndex: number = Math.floor(Math.random() * SALES.length);
+      setCurrentSale(SALES[randomIndex]);
       const randomDelay: number = Math.floor(Math.random() * 5000) + 5000;
       timeoutRef.current = window.setTimeout(showRandomSale, randomDelay);
     };
@@ -59,6 +59,7 @@ const Menubar: React.FC = () => {
     setIsMac(platform.includes('mac'));
   }, []);
 
+  // RENDER
   return (
     <div className="h-[11vh]">
       <div className="FLEX-CENTER GAP">

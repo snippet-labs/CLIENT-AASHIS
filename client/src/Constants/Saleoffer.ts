@@ -1,4 +1,4 @@
-export const sales = [
+export const SALES = [
     'CLEARANCE SALE IS LIVE NOW!',
     'UP TO 50% OFF ON SELECTED ITEMS!',
     'GET OUR PRODUCTS IN WHOLESALE RATE!'

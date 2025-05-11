@@ -11,7 +11,9 @@ const Navigationbar = lazy(
 // PAGES
 const Homepage = lazy(() => import('../Pages/Home/Home'));
 
+// FUNCTIONAL COMPONENT
 const Layout: React.FC = () => {
+  // RENDER
   return (
     <div className="CONTAINER SCREEN COLUMN RELATIVE">
       <Suspense fallback={<Loader />}>

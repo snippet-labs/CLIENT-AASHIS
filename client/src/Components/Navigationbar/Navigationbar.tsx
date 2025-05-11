@@ -10,6 +10,7 @@ import useWindowSize from '../../Hooks/useWindowSize';
 //UTILS
 import Button from '../../Utils/Button/Button';
 
+// FUNCTIONAL COMPONENT
 const Navigationbar: React.FC = () => {
   // PATH
   const NAVIGATION = {
@@ -18,9 +19,10 @@ const Navigationbar: React.FC = () => {
     PROFILE: { icon: <FaUserAlt size={20} />, path: '/profile' },
   };
 
-  //HOOKS
+  //HOOK
   const windowSize: number = useWindowSize();
 
+  // RENDER
   return (
     <div>
       <div className="PADDING HEIGHT bg-gray-300 ROUNDED">

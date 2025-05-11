@@ -4,7 +4,9 @@ import React from 'react';
 import { lineSpinner } from 'ldrs';
 lineSpinner.register();
 
+// FUNCTIONAL UTILITY COMPONENT
 const Loader: React.FC = () => {
+  // RENDER
   return (
     <div className="LOADER">
       {React.createElement('l-line-spinner', {

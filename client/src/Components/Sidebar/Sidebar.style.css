@@ -1,0 +1,3 @@
+.BORDER-RIGHT-CORNER {
+    @apply rounded-r-3xl;
+}

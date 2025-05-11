@@ -2,3 +2,10 @@
 .PRIMARY-GRAY {
   @apply bg-gray-300;
 }
+.HOVER-PRIMARY-GRAY {
+  @apply hover:bg-gray-300;
+}
+
+.WHITE {
+  @apply bg-white;
+}
