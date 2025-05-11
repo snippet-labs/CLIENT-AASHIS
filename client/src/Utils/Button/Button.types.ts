@@ -1,7 +1,7 @@
 
 export interface ButtonType {
-  windowSize: number;
-  icon: React.ReactNode;
-  title: string;
+  windowSize?: number;
+  icon?: React.ReactNode;
+  title?: string;
   className?: string;
 }
