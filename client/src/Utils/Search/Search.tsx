@@ -6,8 +6,11 @@ import { MdKeyboardCommandKey } from 'react-icons/md';
 // TYPES
 import { SearchProps } from './Search.types';
 
+// FUNCTIONAL UTILITY COMPONENT
 const Searchbar: React.FC<SearchProps> = ({ isMac, windowSize }) => {
   const isMobile = windowSize <= 1300;
+
+  // RENDER
   return (
     <div className="FLEX-CENTER HOVER-LINK TEXT hover:bg-black hover:text-white">
       <IoSearchSharp size={20} />

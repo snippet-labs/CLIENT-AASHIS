@@ -4,4 +4,5 @@ export interface ButtonType {
   icon?: React.ReactNode;
   title?: string;
   className?: string;
+  onClick?: () => void;
 }

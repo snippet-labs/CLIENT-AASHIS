@@ -11,6 +11,7 @@ import { SearchModalProps } from './Search.types';
 // COMPONENTS
 import RecentSearches from './RecentSearch';
 
+// FUNCTIONAL UTILITY COMPONENT
 const SearchModal: React.FC<SearchModalProps> = ({
   isOpen,
   onClose,
@@ -91,16 +92,17 @@ const SearchModal: React.FC<SearchModalProps> = ({
 
   if (!isOpen) return null;
 
-    const isMobile = windowSize <= 1300;
+  const isMobile = windowSize <= 1300;
 
+  // RENDER
   return (
     <div
-      className="fixed inset-0 bg-black/40 BLUR FLEX-START pt-[20vh] Z50 animate-in fade-in duration-200"
+      className="fixed inset-0 BLUR-MD SHADOW FLEX-START pt-[20vh] Z50 animate-in fade-in duration-200"
       onClick={onClose}
     >
       <div
         ref={modalRef}
-        className="w-full max-w-2xl mx-4 bg-white rounded-xl shadow-2xl overflow-hidden FLEX COLUMN max-h-[60vh] animate-in zoom-in-95 duration-200"
+        className="w-full max-w-2xl mx-4 bg-white rounded-xl BORDER SHADOW overflow-hidden FLEX COLUMN max-h-[60vh] animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="CENTER px-4 py-3 border-b border-gray-100">
@@ -149,8 +151,8 @@ const SearchModal: React.FC<SearchModalProps> = ({
           <div className="END px-4 py-3 border-t border-gray-100">
             <div className="CENTER gap-1 text-xs text-gray-500">
               {isMac ? (
-                <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
-                  <MdKeyboardCommandKey size={20} />
+                <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-1 font-medium">
+                  <MdKeyboardCommandKey size={14} />
                 </span>
               ) : (
                 <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
@@ -158,7 +160,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
                 </span>
               )}
               <span className="text-gray-400">+</span>
-              <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-0.5 min-w-[18px] font-medium">
+              <span className="FLEX-CENTER bg-gray-100 rounded px-1.5 py-1 min-w-[18px] font-medium">
                 K
               </span>
               <span className="ml-1">to close</span>

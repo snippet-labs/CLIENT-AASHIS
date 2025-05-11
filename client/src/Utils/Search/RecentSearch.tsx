@@ -7,6 +7,7 @@ import { RecentSearchesProps } from './Search.types';
 import { FaClockRotateLeft } from 'react-icons/fa6';
 import { FaArrowRight } from 'react-icons/fa6';
 
+// FUNCTIONAL UTILITY COMPONENT
 const RecentSearches: React.FC<RecentSearchesProps> = ({
   searches,
   onSelectSearch,
@@ -20,6 +21,7 @@ const RecentSearches: React.FC<RecentSearchesProps> = ({
     );
   }
 
+  // RENDER
   return (
     <div className="py-2 px-4">
       <div className="FLEX-BETWEEN py-2">
