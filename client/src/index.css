@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './mui.css';
+@import './globals.css';
 
 /* UTILITIES STYLE */
 .FIXED {
@@ -7,6 +8,9 @@
 }
 .RELATIVE {
   @apply relative;
+}
+.HEIGHT-FULL {
+  @apply h-full;
 }
 .HEIGHT {
   @apply h-[45px];
@@ -61,8 +65,14 @@
 .SCREEN {
   @apply h-screen;
 }
+.SHADOW {
+  @apply shadow-xl;
+}
 .CONTAINER {
   @apply p-2;
+}
+.BORDER {
+  @apply border-1;
 }
 .FLEX {
   @apply flex;
@@ -110,17 +120,27 @@
 }
 
 /* HOVER */
+.POINTER {
+  @apply hover:cursor-pointer;
+}
 .HOVER-BUTTON {
   @apply border-transparent hover:bg-black hover:text-white hover:cursor-pointer p-1 rounded-md;
 }
 .HOVER-LINK {
   @apply border-transparent rounded-full px-2 py-0.5 md:px-4 md:py-0.5 lg:px-4 lg:py-0.5;
 }
-.BLUR {
+.BLUR-SM {
   @apply backdrop-blur-sm;
+}
+.BLUR-MD {
+  @apply backdrop-blur-md;
 }
 
 /* COMPONENTS & UTILITIES */
 @import './Components/Menubar/Menubar.style.css';
+@import './Components/Sidebar/Sidebar.style.css';
+
 @import './Utils/Loader/Loader.style.css';
 @import './Utils/Search/Search.style.css';
+
+@import './Pages/Home/Home.style.css';

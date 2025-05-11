@@ -1,7 +1,19 @@
-import { ButtonType } from "./Button.types";
+import { ButtonType } from './Button.types';
 
-const Button:React.FC<ButtonType> = ({ windowSize, icon, title, className }) => {
+// FUNCTIONAL UTILITY COMPONENT
+const Button: React.FC<ButtonType> = ({
+  windowSize,
+  icon,
+  title,
+  className,
+  onClick,
+}) => {
   const isMobile = windowSize <= 1300;
-  return <button className={className}>{isMobile ? icon : title}</button>;
+  // RENDER
+  return (
+    <button onClick={onClick} className={className}>
+      {isMobile ? icon : title}
+    </button>
+  );
 };
 export default Button;

@@ -1,0 +1,6 @@
+.CLICK {
+  @apply hover:bg-black hover:text-white;
+}
+.TRANSITION {
+  @apply transition-all;
+}
