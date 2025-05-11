@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router';
+import Errorpage from '../Pages/Error/Error';
 
 // UTILS
 const Loader = lazy(() => import('../Utils/Loader/Loader'));
@@ -22,7 +23,10 @@ const Layout: React.FC = () => {
         </div>
         <div className="FLEX-GROW PADDING-TOP PADDING-BOTTOM FLOW-Y-AUTO CONTENT-TOP-MARGIN CONTENT-BOTTOM-MARGIN">
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route>
+              <Route path="/" element={<Homepage />} />
+              <Route path="*" element={<Errorpage />} />
+            </Route>
           </Routes>
         </div>
         <div className="FIXED B2 L2 R2 Z10">
