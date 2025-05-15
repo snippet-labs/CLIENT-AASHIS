@@ -1,7 +1,7 @@
-import { ButtonType } from './Button.types';
+import { ButtonPropTypes } from './Button.types';
 
 // FUNCTIONAL UTILITY COMPONENT
-const Button: React.FC<ButtonType> = ({
+const Button: React.FC<ButtonPropTypes> = ({
   windowSize,
   icon,
   title,

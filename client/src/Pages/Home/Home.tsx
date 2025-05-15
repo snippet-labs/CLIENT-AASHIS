@@ -31,7 +31,11 @@ const Home: React.FC = () => {
         />
       </span>
 
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)}>
+      <Sidebar
+        dataTestId="sidebar"
+        isOpen={isSidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      >
         <ul>
           {SHOPPING_CATEGORIES.map((item, index) => (
             <li
