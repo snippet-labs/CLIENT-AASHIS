@@ -32,4 +32,4 @@ bun.lockb
 bun.lock
 
 # coverage
-./coverage
+coverage
