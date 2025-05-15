@@ -7,11 +7,12 @@ const Button: React.FC<ButtonPropTypes> = ({
   title,
   className,
   onClick,
+  dataTestId,
 }) => {
   const isMobile = Number(windowSize) <= 1300;
   // RENDER
   return (
-    <button onClick={onClick} className={className}>
+    <button onClick={onClick} className={className} data-testid={dataTestId}>
       {isMobile ? icon : title}
     </button>
   );
