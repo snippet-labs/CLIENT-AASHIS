@@ -5,4 +5,5 @@ export interface ButtonType {
   title?: string;
   className?: string;
   onClick?: () => void;
+  dataTestId?: string;
 }

@@ -8,7 +8,7 @@ const Button: React.FC<ButtonType> = ({
   className,
   onClick,
 }) => {
-  const isMobile = windowSize <= 1300;
+  const isMobile = Number(windowSize) <= 1300;
   // RENDER
   return (
     <button onClick={onClick} className={className}>

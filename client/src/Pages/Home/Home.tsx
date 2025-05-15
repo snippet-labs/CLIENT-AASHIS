@@ -27,6 +27,7 @@ const Home: React.FC = () => {
           className="TEXT PADDING ROUNDED PRIMARY-GRAY CLICK TRANSITION POINTER"
           icon={<VscSettings size={20} />}
           onClick={() => setSidebarOpen(true)}
+          dataTestId="show-categories-button"
         />
       </span>
 
