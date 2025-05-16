@@ -27,10 +27,15 @@ const Home: React.FC = () => {
           className="TEXT PADDING ROUNDED PRIMARY-GRAY CLICK TRANSITION POINTER"
           icon={<VscSettings size={20} />}
           onClick={() => setSidebarOpen(true)}
+          dataTestId="show-categories-button"
         />
       </span>
 
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)}>
+      <Sidebar
+        dataTestId="sidebar"
+        isOpen={isSidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      >
         <ul>
           {SHOPPING_CATEGORIES.map((item, index) => (
             <li

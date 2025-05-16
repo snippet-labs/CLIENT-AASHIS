@@ -3,13 +3,18 @@ import React from 'react';
 // ICONS
 import { VscClose } from 'react-icons/vsc';
 // TYPES
-import { SidebarProps } from './Sidebar.types';
+import { SidebarPropTypes } from './Sidebar.types';
 
 // FUNCTIONAL COMPONENT
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, children }) => {
+const Sidebar: React.FC<SidebarPropTypes> = ({
+  isOpen,
+  onClose,
+  children,
+  dataTestId,
+}) => {
   // RENDER
   return (
-    <>
+    <div data-testid={dataTestId}>
       <div
         className={`FIXED inset-0 Z50 bg-opacity-30 BLUR-MD transition-opacity duration-300 ${
           isOpen
@@ -34,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, children }) => {
         </div>
         <div className="p-4 FLOW-Y-AUTO">{children}</div>
       </div>
-    </>
+    </div>
   );
 };
 
