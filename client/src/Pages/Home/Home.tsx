@@ -25,35 +25,38 @@ const Home: React.FC = () => {
 
   // RENDER
   return (
-    <div className="mt-5 RELATIVE">
-      <span>
-        <Button
-          title="SHOW CATEGORIES"
-          windowSize={windowSize}
-          className="TEXT PADDING ROUNDED PRIMARY-GRAY CLICK TRANSITION POINTER"
-          icon={<VscSettings size={20} />}
-          onClick={() => setSidebarOpen(true)}
-          dataTestId="show-categories-button"
-        />
-      </span>
+    <>
+      <div className="mt-5 RELATIVE">
+        <span>
+          <Button
+            title="SHOW CATEGORIES"
+            windowSize={windowSize}
+            className="TEXT PADDING ROUNDED PRIMARY-GRAY CLICK TRANSITION POINTER"
+            icon={<VscSettings size={20} />}
+            onClick={() => setSidebarOpen(true)}
+            dataTestId="show-categories-button"
+          />
+        </span>
 
-      <Sidebar
-        dataTestId="sidebar"
-        isOpen={isSidebarOpen}
-        onClose={() => setSidebarOpen(false)}
-      >
-        <ul>
-          {SHOPPING_CATEGORIES.map((item, index) => (
-            <li
-              key={index}
-              className="PADDING ROUNDED POINTER HOVER-PRIMARY-GRAY"
-            >
-              {item.label}
-            </li>
-          ))}
-        </ul>
-      </Sidebar>
-    </div>
+        <Sidebar
+          dataTestId="sidebar"
+          isOpen={isSidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+        >
+          <ul>
+            {SHOPPING_CATEGORIES.map((item, index) => (
+              <li
+                key={index}
+                className="PADDING ROUNDED POINTER HOVER-PRIMARY-GRAY"
+              >
+                {item.label}
+              </li>
+            ))}
+          </ul>
+        </Sidebar>
+      </div>
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+    </>
   );
 };
 
