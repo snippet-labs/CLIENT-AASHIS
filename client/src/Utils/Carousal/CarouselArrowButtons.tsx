@@ -4,6 +4,8 @@ import React, {
   useEffect,
   useState,
 } from 'react';
+
+//EMBLA
 import { EmblaCarouselType } from 'embla-carousel';
 import './Carousel.style.css'
 
@@ -78,6 +80,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 export const NextButton: React.FC<PropType> = (props) => {
   const { children, ...restProps } = props;
 
+  //RENDER
   return (
     <button
       className="embla__button embla__button--next"

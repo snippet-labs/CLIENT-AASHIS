@@ -5,12 +5,13 @@ import { VscSettings } from 'react-icons/vsc';
 // COMPONENTS
 import Button from '../../Utils/Button/Button';
 import Sidebar from '../../Components/Sidebar/Sidebar';
+import Carousel from '../../Utils/Carousal/Carousel';
 // HOOKS
 import useWindowSize from '../../Hooks/useWindowSize';
 // CONSTANTS
 import { SHOPPING_CATEGORIES } from '../../Constants/Categories';
 import { EmblaOptionsType } from 'embla-carousel';
-import EmblaCarousel from '../../Utils/Carousal/Carousel';
+
 
 // FUNCTIONAL COMPONENT
 const Home: React.FC = () => {
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
   // STATES
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
+  //CONSTANTS
   const OPTIONS: EmblaOptionsType = { loop: true, duration: 30 };
   const SLIDE_COUNT = 5;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
@@ -55,7 +57,7 @@ const Home: React.FC = () => {
           </ul>
         </Sidebar>
       </div>
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      <Carousel slides={SLIDES} options={OPTIONS} />
     </>
   );
 };

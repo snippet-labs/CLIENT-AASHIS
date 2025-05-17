@@ -1,4 +1,6 @@
 import React from 'react';
+
+//EMBLA
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import Fade from 'embla-carousel-fade';
@@ -15,6 +17,7 @@ type PropType = {
   options?: EmblaOptionsType;
 };
 
+//FUNCTIONAL COMPONENT
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Fade()]);
@@ -29,6 +32,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
+  //RENDER
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>

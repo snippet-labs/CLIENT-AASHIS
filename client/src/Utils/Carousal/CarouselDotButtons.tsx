@@ -4,8 +4,11 @@ import React, {
   useEffect,
   useState,
 } from 'react';
+
+//EMBLA
 import { EmblaCarouselType } from 'embla-carousel';
 import './Carousel.style.css'
+
 type UseDotButtonType = {
   selectedIndex: number;
   scrollSnaps: number[];
@@ -57,6 +60,7 @@ type PropType = ComponentPropsWithRef<'button'>;
 export const DotButton: React.FC<PropType> = (props) => {
   const { children, ...restProps } = props;
 
+  //RENDER
   return (
     <button type="button" {...restProps}>
       {children}
