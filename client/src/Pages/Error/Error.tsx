@@ -11,7 +11,10 @@ import Button from '../../Utils/Button/Button';
 //ICONS
 import { FaArrowLeft } from 'react-icons/fa';
 
+//FUNCTIONAL COMPONENT
 const Error: React.FC = () => {
+
+  // RENDER
   return (
     <div className="FLEX-CENTER COLUMN h-full overflow-hidden">
       <Lottie
