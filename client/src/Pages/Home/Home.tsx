@@ -10,7 +10,7 @@ import useWindowSize from '../../Hooks/useWindowSize';
 // CONSTANTS
 import { SHOPPING_CATEGORIES } from '../../Constants/Categories';
 import { EmblaOptionsType } from 'embla-carousel';
-import EmblaCarousel from '../../Utils/Carousal/Carousal';
+import EmblaCarousel from '../../Utils/Carousal/Carousel';
 
 // FUNCTIONAL COMPONENT
 const Home: React.FC = () => {
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
   // RENDER
   return (
     <>
-      <div className="mt-3 RELATIVE">
+      <div className="mt-5 RELATIVE">
         <span>
           <Button
             title="SHOW CATEGORIES"

@@ -6,9 +6,9 @@ import {
   NextButton,
   PrevButton,
   usePrevNextButtons,
-} from "./CarousalArrowButtons";
-import { DotButton, useDotButton } from "./CarousalDotButtons";
-import './Carousal.style.css'
+} from "./CarouselArrowButtons";
+import { DotButton, useDotButton } from "./CarouselDotButtons";
+import './Carousel.style.css'
 
 type PropType = {
   slides: number[];
