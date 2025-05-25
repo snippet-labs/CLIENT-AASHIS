@@ -142,6 +142,7 @@
 
 @import './Utils/Loader/Loader.style.css';
 @import './Utils/Search/Search.style.css';
+@import './Utils/Carousal/Carousal.style.css';
 
 @import './Pages/Home/Home.style.css';
 @import './Pages/Error/Error.styles.css'
